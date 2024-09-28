@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+bool isCap(string s){
+    for(char ch : s){
+        if(!isupper(ch)){
+            return false;
+        }
+    }
+    return true;
+}
+int main()
+{
+    string s;
+    cin>>s;
+    if(isCap(s) || (isCap(s.substr(1)) && islower(s[0]))){
+        for(char &ch:s){
+           if(isupper(ch)) ch = tolower(ch);
+           else ch = toupper(ch);
+        }
+    }
+    cout<<s;
+    return 0;
+}
