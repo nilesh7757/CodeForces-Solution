@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+#include<climits>
+#include<cmath>
+using namespace std;
+void solve(){
+    int a,b;
+    cin>>a>>b;
+    int d = ceil((float)a/(float)b);
+    b = b*d;
+    cout<<b-a<<endl;
+}
+int main()
+{
+    int tc;
+    cin>>tc;
+    while(tc--){
+        solve();
+    }
+    return 0;
+}
