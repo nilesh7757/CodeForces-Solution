@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    string s;
+    cin>>s;
+    unordered_map<string,int>mp;
+    for(int i = 0; i<n-1; i++){
+        string ans = string(1,s[i]) + s[i+1];
+        mp[ans]++;
+    }
+    int num = 0;
+    string answer = "";
+    for(auto it:mp){
+        if(it.second > num){
+            num = it.second;
+            answer = it.first;
+        }
+    }
+    cout<<answer<<endl;
+    return 0;
+}
